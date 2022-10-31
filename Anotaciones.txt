@@ -1,0 +1,58 @@
+npm init -y --> Crea el package.json
+
+npm i express
+
+npm i express connect-flash --> Guarda mensajes en alguna cookie o sesion 
+para indicar si una contraseña está mal 
+
+npm i express bcryptjs --> bcrypt me permite almacenar las contraseñas
+encriptadas para mayor seguridad
+
+npm i express express-handlebars --> express-handlebars
+Me permite crear vistas html para cada usuario
+
+npm i express connect-flash bcryptjs express-handlebars express-session --> express-session
+Me permite mantener la sesion iniciada y guardar datos de usuario
+
+npm i express method-override --> me permite enviar peticiones put o delete desde
+la vista
+
+npm i express mongoose --> mongoose me permite manejar la base de datos
+
+npm i express passport --> passport me permite autenticar al usuario, trabaja junto
+con bcrypt para validar los datos
+
+npm i express passport-local --> Para que los datos que utilice sean de la base
+de datos local
+
+npm install dotenv --> Me permite guardar informacion de conexion de bases de datos
+tokens, etc. Para mayor seguridad
+
+npm install nodemon --> Para que el servidor se reinicie automáticamente
+
+npm install handlebars --> Para evitar errores de express-handlebars
+
+npm install npm-check-updates -D --> para chequear actualizaciones
+
+En el package json edito el script para poder incializar mi servidor de forma
+más rápida
+"scripts": {
+    "start": "node src/index.js"
+    "dev": "nodemon src/index.js"
+  }
+
+npm run dev para ejecutarlo con nodemon
+
+mongod para mantener los servicios de mongo funcionando
+
+En el .env guardo donde se ubica la base de datos
+Y el nombre de la base
+
+Para no subir los archivos indico en el 
+.gitignore
+.env
+node_modules
+
+
+
+
