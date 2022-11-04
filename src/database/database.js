@@ -1,15 +1,17 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
+import { MONGODB_URI } from "../config.js";
 
-//  Para hacer más seguro el sitio y la base de datos utilizo el .env
-const { NOTES_APP_MONGODB_HOST, NOTES_APP_MONGODB_DATABASE } = process.env;
+try {
+  const db = await mongoose.connect(MONGODB_URI);
+  console.log("Connected to ", db.connection.name);
+} catch (error) {
+  console.error(error);
+}
 
-const MONGODB_URI =
-  `mongodb://${NOTES_APP_MONGODB_HOST}/${NOTES_APP_MONGODB_DATABASE}`;
+mongoose.connection.on("connected", () => {
+  console.log("Mongoose is connected");
+});
 
-mongoose
-  .connect(MONGODB_URI, {
-    useUnifiedTopology: true,
-    useNewUrlParser: true,
-  })
-  .then((db) => console.log("Database is connected"))
-  .catch((err) => console.log(err));
+mongoose.connection.on("disconnected", () => {
+  console.log("Mongoose is disconnected");
+});

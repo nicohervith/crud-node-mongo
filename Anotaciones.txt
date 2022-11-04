@@ -53,6 +53,7 @@ Para no subir los archivos indico en el
 .env
 node_modules
 
-
+Handlebars --> Motores de plantillas para los datos almacenados ( Que se muestran
+como html)
 
 
