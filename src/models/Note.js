@@ -20,4 +20,5 @@ const noteSchema = new Schema(
 
 //A partir del esquema creo el modelo
 
+//Mongoose va a ser que mi db se llame Note
 module.exports = model("Note", noteSchema);

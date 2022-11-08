@@ -56,4 +56,6 @@ node_modules
 Handlebars --> Motores de plantillas para los datos almacenados ( Que se muestran
 como html)
 
+method-override --> me permite enviar peticiones delete, post
+
 
