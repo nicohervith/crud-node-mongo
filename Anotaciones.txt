@@ -56,6 +56,11 @@ node_modules
 Handlebars --> Motores de plantillas para los datos almacenados ( Que se muestran
 como html)
 
-method-override --> me permite enviar peticiones delete, post
+method-override --> me permite enviar peticiones delete, post.
+
+En User, en la parte de email utilizo unique:true para que los emails ya registrados
+no se puedan repetir
+
+db.users.drop() --> Para eliminar todos los usuarios
 
 

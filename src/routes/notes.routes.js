@@ -28,3 +28,4 @@ router.put("/notes/edit-note/:id", isAuthenticated, updateNote);
 router.delete("/notes/delete/:id", isAuthenticated, deleteNote);
 
 export default router;
+//module.exports = router;
