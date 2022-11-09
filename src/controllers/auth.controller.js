@@ -1,11 +1,10 @@
-const usersCtrl = {};
+import User from "../models/User.js";
 
-const User = require("../models/User");
-usersCtrl.renderSignUpForm = (req, res) => {
+export const renderSignUpForm = (req, res) => {
   res.render("auth/signup");
 };
 
-usersCtrl.signup = async (req, res) => {
+export const signup = async (req, res) => {
   const errros = [];
   const { name, email, password } = req.body;
   if (password != confirm_password) {
@@ -39,16 +38,14 @@ usersCtrl.signup = async (req, res) => {
   }
 };
 
-usersCtrl.renderSigninForm = (req, res) => {
+export const renderSigninForm = (req, res) => {
   res.render("auth/signin");
 };
 
-usersCtrl.signin = (req, res) => {
+export const signin = (req, res) => {
   res.send("signin");
 };
 
-usersCtrl.logout = (req, res) => {
+export const logout = (req, res) => {
   res.send("logout");
 };
-
-module.exports = usersCtrl;

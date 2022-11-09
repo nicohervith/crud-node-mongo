@@ -1,7 +1,7 @@
-const { Schema, model } = require("mongoose");
+import mongoose from "mongoose";
 
 // Para detallar que es lo que voy a guardar en la base de datos
-const noteSchema = new Schema(
+const NoteSchema = new mongoose.Schema(
   {
     title: {
       type: String,
@@ -21,4 +21,4 @@ const noteSchema = new Schema(
 //A partir del esquema creo el modelo
 
 //Mongoose va a ser que mi db se llame Note
-module.exports = model("Note", noteSchema);
+export default mongoose.model("Note", NoteSchema);

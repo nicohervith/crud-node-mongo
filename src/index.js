@@ -1,6 +1,6 @@
 import app from "./app.js";
 import { createAdminUser } from "./libs/createUser.js";
-import "./database/database.js";
+import "./database.js";
 
 async function main() {
   await createAdminUser();
