@@ -46,6 +46,7 @@ app.use(
     store: MongoStore.create({ mongoUrl: MONGODB_URI }),
   })
 );
+// Siempre el intialize va despues del session
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
@@ -55,6 +56,7 @@ app.use((req, res, next) => {
   res.locals.success_msg = req.flash("success_msg");
   res.locals.error_msg = req.flash("error_msg");
   res.locals.error = req.flash("error");
+  //Esto me permite controlar que es lo que passport tiene y utilizarlo para ver si el usuario fue autenticado
   res.locals.user = req.user || null;
   next();
 });
