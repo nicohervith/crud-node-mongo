@@ -65,6 +65,10 @@ db.users.drop() --> Para eliminar todos los usuarios
 
 Passport --> Guarda la lógica que utilizo para el login y guarda la sesión 
 en la memoria del servidor, y es el que se encarga de verificar si el usuario
-puede acceder a una vista o no
+puede acceder a una vista o no.
+
+Creo que auth.js en helpers, con la funcion isAuthenticated
+Utilizo el isAuthenticated en las rutas para válidar que un usuario esté logueado
+para que no pueda ver las rutas que deseo proteger
 
 
