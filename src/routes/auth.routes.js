@@ -5,7 +5,7 @@ import {
   renderSigninForm,
   signin,
   logout,
-} from "../controllers/auth.controller.js";
+} from "../controllers/auth.controllers.js";
 
 const router = Router();
 
